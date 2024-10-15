@@ -2,6 +2,7 @@
 
 namespace APIToolbox\OpenAPI;
 
+use APIToolbox\OpenAPI\Spec\OpenAPI;
 use Symfony\Component\PropertyInfo\Extractor\ConstructorExtractor;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
