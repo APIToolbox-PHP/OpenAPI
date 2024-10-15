@@ -4,7 +4,14 @@ namespace APIToolbox\OpenAPI\Spec;
 
 final readonly class Server
 {
-    public string $url;
-
-    public ?string $description;
+    /**
+     * @param string $url
+     * @param string|null $description
+     * @param array<string,ServerVariable>|null $variables
+     */
+    public function __construct(
+        public string $url,
+        public ?string $description = null,
+        public ?array $variables = null,
+    ) {}
 }

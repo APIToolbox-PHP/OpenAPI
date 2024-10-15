@@ -5,23 +5,17 @@ namespace APIToolbox\OpenAPI\Spec;
 final readonly class OpenAPI
 {
     /**
-     * @param array<string,PathItem> $paths
-     * @param array<int,Server> $servers
-     * @param array<int,Tag> $tags
+     * @param array<string,PathItem>|null $paths
+     * @param array<int,Server>|null $servers
+     * @param array<int,Tag>|null $tags
      */
     public function __construct(
         public string $openapi,
         public Info $info,
-
-        // TODO: Revist this.
-        public array $paths,
-
-        public array $servers = [],
-
+        public ?array $paths = null,
+        public ?array $servers = null,
         public ?Components $components = null,
-
-        public array $tags = [],
-
+        public ?array $tags = null,
         public ?ExternalDocumentation $externalDocs = null,
     ) {}
 }
